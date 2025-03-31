@@ -1,74 +1,52 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, SafeAreaView, Image, Linking, ScrollView, TouchableOpacity } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-
-export default function HomeScreen() {
+const HomeScreen = () => {
+    
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.content}>
+        <Image source={require('../../assets/images/food_park.png')} style={styles.image} />
+        <Text style={styles.h1}>Bem-vindo ao Orospark!</Text>
+        <Text style={styles.intro}>
+          Orospark é um dos food parks mais frequentados e bem avaliados de Florianópolis. 
+          Nossos restaurantes parceiros garantirão que saia daqui feliz e satisfeito!
+        </Text>
+        <Text style={styles.h2}>Você pode nos encontrar em:</Text>
+        <MapView
+          style={styles.map}
+          initialRegion={{ latitude: -27.5954, longitude: -48.5480, latitudeDelta: 0.01, longitudeDelta: 0.01 }}>
+          <Marker coordinate={{ latitude: -27.5954, longitude: -48.5480 }} title="Orospark" />
+        </MapView>
+        <View style={styles.iconsDiv}>
+        <TouchableOpacity>
+        <Image source={require('../../assets/images/tele.png')} style={styles.icons}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image source={require('../../assets/images/insta.png')} style={styles.icons}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image source={require('../../assets/images/email.png')} style={styles.icons}/>
+        </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+  container: { flex: 1, backgroundColor: '#a37a51' },
+  content: { alignItems: 'center', padding: 20 },
+  image: { width: 375, height: 230},
+  h1: { fontSize: 28, fontWeight: 900, color: '#000000', marginBottom: 10,  marginTop: 40 },
+  intro: { textAlign: 'center', fontSize: 20, color: '#000000', marginBottom: 40, fontWeight: 500 },
+  info: { fontSize: 16, color: 'blue', marginBottom: 10 },
+  map: { width: '100%', height: 200, marginTop: 10, borderRadius: 10 },
+  iconsDiv: {width: '100%', alignItems: 'center', justifyContent: 'space-evenly', flexDirection: 'row', marginTop: 30},
+  icons: {},
+  h2: {fontSize: 24, fontWeight: 900}
+
 });
+
+export default HomeScreen;
