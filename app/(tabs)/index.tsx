@@ -22,26 +22,30 @@ const HomeScreen = () => {
           experimentar o melhor hambúrguer da região na <Text style={styles.loja}>Hamburgueria 99</Text> e muito mais! :D
         </Text>
         <View style={styles.iconsDiv}>
-        <Image source={require('../../assets/images/churrasco.jpg')} style={styles.iconsLoja}/>
-        <Image source={require('../../assets/images/hamburguer.jpg')} style={styles.iconsLoja}/>
-        <Image source={require('../../assets/images/pizza.jpg')} style={styles.iconsLoja}/>
-        <Image source={require('../../assets/images/sushi.jpg')} style={styles.iconsLoja}/>
-        <Image source={require('../../assets/images/acai.jpg')} style={styles.iconsLoja}/>
+        <Image source={{ uri: 'https://i.imgur.com/FItyk4R.jpeg'}} style={styles.iconsLoja}/>
+        <Image source={{ uri: 'https://i.imgur.com/JWYbZiY.jpeg'}} style={styles.iconsLoja}/>
+        <Image source={{ uri: 'https://i.imgur.com/k7o4fj1.jpeg'}} style={styles.iconsLoja}/>
+        <Image source={{ uri: 'https://i.imgur.com/TPnvjBN.jpeg'}} style={styles.iconsLoja}/>
+        <Image source={{ uri: 'https://i.imgur.com/8qp8MlY.jpeg'}} style={styles.iconsLoja}/>
         </View>
         <Pressable style={styles.botaoLojas} onPress={() => router.push({ pathname: "/lojas" })}>
           <Text style={{color: '#F9B710', alignItems: 'center', justifyContent: 'center', fontWeight: '800', fontSize: 16}}>RESTAURANTES</Text>
         </Pressable>
         <Text style={styles.h2}>Você pode nos encontrar em:</Text>
-
+        <MapView
+          style={styles.map}
+          initialRegion={{ latitude: -27.6673, longitude: -48.5504, latitudeDelta: 0.01, longitudeDelta: 0.01 }}>
+          <Marker coordinate={{ latitude: -27.6673, longitude: -48.5504 }} title="Orospark" />
+        </MapView>
         <View style={styles.iconsDiv}>
         <TouchableOpacity>
-        <Image source={require('../../assets/images/tele.png')}/>
+        <Image source={{uri: 'https://i.imgur.com/cKfvUHt.png'}} style={styles.iconsLoja}/>
         </TouchableOpacity>
         <TouchableOpacity>
-        <Image source={require('../../assets/images/insta.png')}/>
+        <Image source={{uri: 'https://i.imgur.com/OkBt4EK.png'}} style={styles.iconsLoja}/>
         </TouchableOpacity>
         <TouchableOpacity>
-        <Image source={require('../../assets/images/email.png')}/>
+        <Image source={{uri: 'https://i.imgur.com/gRmYRBy.png'}} style={styles.iconsLoja}/>
         </TouchableOpacity>
         </View>
         </View>
@@ -81,7 +85,8 @@ const styles = StyleSheet.create({
     marginTop: 10, 
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: 'black' },
+    borderColor: 'black',
+    marginBottom: 20},
   iconsDiv: { 
     width: '100%',
     height: 100, 
@@ -93,7 +98,8 @@ const styles = StyleSheet.create({
     fontWeight: 800},
   h2: { 
     fontSize: 24, 
-    fontWeight: 900},
+    fontWeight: 900,
+    marginBottom: 20},
   botaoLojas: { 
     height: 52.5, 
     width: 200, 

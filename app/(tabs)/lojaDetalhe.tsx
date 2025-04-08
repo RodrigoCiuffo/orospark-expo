@@ -15,7 +15,6 @@ interface Loja {
   banner: string;
   fotos: string[];
   delivery: string;
-  cardapio: string;
 }
 
 const LojaDetalheScreen = () => {

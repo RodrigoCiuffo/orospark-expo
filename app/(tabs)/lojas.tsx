@@ -22,7 +22,7 @@ const LojasScreen = () => {
   return (
     <ScrollView >
       <View style={styles.container}>
-      <Image style={styles.banner} source={require('../../assets/images/restaurant-meal-md.png')}></Image>
+      <Image style={styles.banner} source={{uri: 'https://i.imgur.com/uHpBZSv.png'}}></Image>
       <Text style={styles.h1}>RESTAURANTES</Text>
       <FlatList
         data={lojas}
@@ -73,7 +73,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   banner: {
-    marginTop: 20},
+    marginTop: 20,
+    width: 297,
+    height: 219},
   h1:{ 
     textAlign: 'center',
     fontSize: 24,

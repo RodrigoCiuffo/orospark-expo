@@ -61,8 +61,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', 
     marginTop: 10 },
   descricao: { 
-    fontSize: 16, 
-    marginVertical: 10 },
+    fontSize: 18, 
+    marginVertical: 10,
+    fontWeight: 600 },
   quantidade: { 
     fontSize: 16, 
     fontWeight: 'bold' },
@@ -76,7 +77,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', 
     marginTop: 10 },
   ingrediente: { 
-    fontSize: 16 },
+    fontSize: 18,
+    fontWeight: 600 },
   botaoVoltar: { 
     width: '100%', 
     alignItems: 'center', 
