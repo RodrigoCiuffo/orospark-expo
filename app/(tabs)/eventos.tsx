@@ -1,57 +1,23 @@
 import React from 'react';
 import { ScrollView, View, Text, StyleSheet, FlatList } from 'react-native';
 import { Video } from 'expo-av';
+import eventosData from '../../assets/eventos.json';
 
-const eventos = [
-  
-  {
-    id: '1',
-    nome: 'System of a Down',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744071355/System_Of_A_Down_-_Chop_Suey_Official_HD_Video_1_ytasmu.mp4' }
-  },
-  {
-    id: '2',
-    nome: 'Scalene',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744122166/surreal_yv4YAb04_isquvj.mp4' }
-  },
-  {
-    id: '3',
-    nome: 'Supercombo',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744121957/sol-da-manha-supercombo-clipe-1_BS38eggM_zuaogv.mp4'}
-  },
-  {
-    id: '4',
-    nome: 'Seafret',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744122865/seafret-loving-you-official-video_fFqtg4Mf_axqyh8.mp4'}
-  },
-  {
-    id: '5',
-    nome: 'Tom Odell',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744121028/tom-odell-sense-1_t0muuqQA_ndq5ds.mp4'}
-  },
-  {
-    id: '6',
-    nome: 'Arctic Monkeys',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744120402/Arctic_Monkeys_-_Fluorescent_Adolescent_Official_Video_llysko.mp4'}
-  },
-  {
-    id: '7',
-    nome: 'Creed',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744120402/Arctic_Monkeys_-_Fluorescent_Adolescent_Official_Video_llysko.mp4'}
-  },
-  {
-    id: '8',
-    nome: 'Los Retros',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744120402/Arctic_Monkeys_-_Fluorescent_Adolescent_Official_Video_llysko.mp4'}
-  },
-  {
-    id: '9',
-    nome: 'Cuco',
-    video: { uri: 'https://res.cloudinary.com/dnq5qpsot/video/upload/v1744120402/Arctic_Monkeys_-_Fluorescent_Adolescent_Official_Video_llysko.mp4'}
-  },
-];
+interface Evento {
+  id: string;
+  nome: string;
+  video: {
+    uri: string;
+  };
+}
 
 const EventosScreen = () => {
+  const [eventos, setEventos] = React.useState<Evento[]>([]);
+
+  React.useEffect(() => {
+    setEventos(eventosData);
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>EVENTOS SEMANAIS</Text>
@@ -59,10 +25,19 @@ const EventosScreen = () => {
       <FlatList
         data={eventos}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
+        renderItem={({ item, index }) => (
           <View style={styles.evento}>
+            {(index === 0) && (
+              <Text style={styles.semanas}>11/04 a 13/04</Text>
+            )}
+            {(index === 3) && (
+              <Text style={styles.semanas}>18/04 a 20/04</Text>
+            )}
+            {(index === 6) && (
+              <Text style={styles.semanas}>25/04 a 27/04</Text>
+            )}
             <Text style={styles.nome}>{item.nome}</Text>
-            <Video source={item.video} style={styles.video} useNativeControls/>
+            <Video source={item.video} style={styles.video} useNativeControls />
           </View>
         )}
       />
@@ -74,7 +49,9 @@ const styles = StyleSheet.create({
   container: { 
     backgroundColor: '#000000',
     flex: 1, 
-    padding: 20 },
+    padding: 20,
+    borderWidth: 2,
+    borderColor: '#F9B710'},
   evento: { 
     marginBottom: 20 },
   nome: { 
@@ -85,7 +62,10 @@ const styles = StyleSheet.create({
   video: { 
     width: '100%', 
     height: 200,
-    borderRadius: 20},
+    borderRadius: 20,
+    marginBottom: 15,
+    borderWidth: 2,
+  borderColor: '#F9B710'},
   titulo: {
     width: '100%',
     fontSize: 24,
@@ -98,7 +78,16 @@ const styles = StyleSheet.create({
     color: '#F9B710',
     fontSize: 18,
     fontWeight: 700,
-    marginBottom: 40
+    marginBottom: 40,
+    textAlign: 'center'
+  },
+  semanas: {
+    width: '100%',
+    fontSize: 22,
+    fontWeight: 900,
+    textAlign: 'center',
+    marginBottom: 20,
+    color: '#F9B710'
   }
 });
 
