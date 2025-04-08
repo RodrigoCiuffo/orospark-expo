@@ -1,75 +1,80 @@
 [
     {
       "id": 1,
-      "nome": "Pizza da Ilha",
-      "descricao": "As melhores pizzas artesanais de Florianópolis!",
+      "nome": "Manézinho da Pizza",
+      "descricao": "Direto do coração do food park mais queridinho de Floripa, nossas pizzas têm aquele toque especial da ilha: massa leve, recheio generoso e sabor que conquista no primeiro pedaço. Vem curtir esse rolê manezinho com a gente! 🌴🔥",
       "telefone": "(48) 1234-5678",
       "whatsapp": "https://wa.me/554812345678",
-      "logo": "../assets/images/pizza_da_ilha_logo.png",
-      "banner": "../assets/images/pizza_da_ilha_banner.png",
+      "logo": "https://i.imgur.com/k7o4fj1.jpeg",
+      "banner": "https://i.imgur.com/k7o4fj1.jpeg",
       "fotos": [
-        "../assets/images/pizza1.png",
-        "../assets/images/pizza2.png"
+        "https://i.imgur.com/ARPlozQ.jpeg",
+        "https://i.imgur.com/3QYCRC3.jpeg",
+        "https://i.imgur.com/v0Oe5Zt.jpeg"
       ],
-      "delivery": "https://deliverypizzadailha.com",
-      "cardapio": "https://pizzadailha.com/cardapio"
+      "delivery": "https://deliverymanepizza.com",
+      "cardapio": "https://deliverymanepizza.com/cardapio"
     },
     {
       "id": 2,
-      "nome": "Churrasco do Sul",
-      "descricao": "O melhor churrasco gaúcho na Ilha da Magia!",
+      "nome": "Churrasco Sul",
+      "descricao": "O verdadeiro sabor do sul em cada corte! No coração de Floripa, nosso churrasco feito na brasa traz a tradição gaúcha com um toque da ilha. Vem curtir esse clima gostoso no food park! 🔥🍖",
       "telefone": "(48) 8765-4321",
       "whatsapp": "https://wa.me/554887654321",
-      "logo": "../assets/images/churrasco_do_sul_logo.png",
-      "banner": "../assets/images/churrasco_do_sul_banner.png",
+      "logo": "https://i.imgur.com/FItyk4R.jpeg",
+      "banner": "https://i.imgur.com/FItyk4R.jpeg",
       "fotos": [
-        "../assets/images/churrasco1.png",
-        "../assets/images/churrasco2.png"
+        "https://i.imgur.com/I6KfAjF.jpeg",
+        "https://i.imgur.com/mZtGNPj.jpeg",
+        "https://i.imgur.com/00cJNwv.jpeg"
       ],
-      "delivery": "https://churrascodosul.com/delivery",
-      "cardapio": "https://churrascodosul.com/cardapio"
+      "delivery": "https://churrascosul.com/delivery",
+      "cardapio": "https://churrascosul.com/cardapio"
     },
     {
       "id": 3,
-      "nome": "Sushi Express",
-      "descricao": "Sushis e sashimis fresquinhos para você!",
+      "nome": "Sushi Time",
+      "descricao": "Direto de Floripa, o sabor do Japão no seu tempo! Com peixes fresquinhos e combinações criativas, o Sushi Time é o rolê perfeito pra quem curte uma vibe leve e saborosa no food park. 🐟🌊",
       "telefone": "(48) 9988-7766",
       "whatsapp": "https://wa.me/554899887766",
-      "logo": "../assets/images/sushi_express_logo.png",
-      "banner": "../assets/images/sushi_express_banner.png",
+      "logo": "https://i.imgur.com/TPnvjBN.jpeg",
+      "banner": "https://i.imgur.com/TPnvjBN.jpeg",
       "fotos": [
-        "../assets/images/sushi1.png",
-        "../assets/images/sushi2.png"
+        "https://i.imgur.com/3ibVDHx.jpeg",
+        "https://i.imgur.com/35Qv6ty.jpeg",
+        "https://i.imgur.com/4U2mJLR.jpeg"
       ],
-      "delivery": "https://sushiexpress.com/delivery",
-      "cardapio": "https://sushiexpress.com/cardapio"
+      "delivery": "https://sushitime.com/delivery",
+      "cardapio": "https://sushitime.com/cardapio"
     },
     {
       "id": 4,
-      "nome": "Hamburgueria 47",
-      "descricao": "Os hambúrgueres mais suculentos da cidade!",
+      "nome": "Hamburgueria 99",
+      "descricao": "Na vibe de Floripa, a 99 serve burgers artesanais que valem cada mordida! Com ingredientes de qualidade e muito sabor, é parada obrigatória no Orospark pra quem não abre mão de um bom hambúrguer. 🔥😋",
       "telefone": "(48) 5566-7788",
       "whatsapp": "https://wa.me/554855667788",
-      "logo": "../assets/images/hamburgueria_47_logo.png",
-      "banner": "../assets/images/hamburgueria_47_banner.png",
+      "logo": "https://i.imgur.com/JWYbZiY.jpeg",
+      "banner": "https://i.imgur.com/JWYbZiY.jpeg",
       "fotos": [
-        "../assets/images/hamburguer1.png",
-        "../assets/images/hamburguer2.png"
+        "https://i.imgur.com/JWYbZiY.jpeg",
+        "https://i.imgur.com/8lK9xV8.jpeg",
+        "https://i.imgur.com/Wsk0KyD.jpeg"
       ],
-      "delivery": "https://hamburgueria47.com/delivery",
-      "cardapio": "https://hamburgueria47.com/cardapio"
+      "delivery": "https://hamburgueria99.com/delivery",
+      "cardapio": "https://hamburgueria99.com/cardapio"
     },
     {
       "id": 5,
       "nome": "Açaí do Parque",
-      "descricao": "Refresque-se com nosso delicioso açaí!",
+      "descricao": "Refrescância no ponto certo! O Açaí do Parque é a escolha perfeita pra quem curte um açaí caprichado, com toppings de monte e aquele clima leve de Floripa. Ideal pra recarregar as energias no Orospark! 🌴🍓",
       "telefone": "(48) 3344-5566",
       "whatsapp": "https://wa.me/554833445566",
-      "logo": "../assets/images/acai_do_parque_logo.png",
-      "banner": "../assets/images/acai_do_parque_banner.png",
+      "logo": "https://i.imgur.com/8qp8MlY.jpeg",
+      "banner": "https://i.imgur.com/8qp8MlY.jpeg",
       "fotos": [
-        "../assets/images/acai1.png",
-        "../assets/images/acai2.png"
+        "https://i.imgur.com/eycsfLG.jpeg",
+        "https://i.imgur.com/7HAYoap.jpeg",
+        "https://i.imgur.com/8pyg86H.jpeg"
       ],
       "delivery": "https://acaidoparque.com/delivery",
       "cardapio": "https://acaidoparque.com/cardapio"

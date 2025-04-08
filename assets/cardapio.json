@@ -1,0 +1,184 @@
+{
+    "restaurantes": [
+      {
+        "id": 1,
+        "nome": "Pizza da Ilha",
+        "pratos": [
+          {
+            "id": 101,
+            "nome": "Pizza Marguerita",
+            "thumbnail": "https://i.imgur.com/ARPlozQ.jpeg",
+            "imagem": "https://i.imgur.com/ARPlozQ.jpeg",
+            "descricao": "Massa fina, molho de tomate, queijo mussarela, tomate e manjericão.",
+            "quantidade": "8 fatias",
+            "ingredientes": ["Massa", "Molho de tomate", "Queijo mussarela", "Tomate", "Manjericão"],
+            "preco": 45.90
+          },
+          {
+            "id": 102,
+            "nome": "Pizza Calabresa",
+            "thumbnail": "https://i.imgur.com/v0Oe5Zt.jpeg",
+            "imagem": "https://i.imgur.com/v0Oe5Zt.jpeg",
+            "descricao": "Massa crocante, molho caseiro, queijo mussarela e calabresa fatiada.",
+            "quantidade": "8 fatias",
+            "ingredientes": ["Massa", "Molho de tomate", "Queijo mussarela", "Calabresa", "Cebola"],
+            "preco": 42.50
+          },
+          {
+            "id": 103,
+            "nome": "Pizza Quatro Queijos",
+            "thumbnail": "https://i.imgur.com/3QYCRC3.jpeg",
+            "imagem": "https://i.imgur.com/3QYCRC3.jpeg",
+            "descricao": "Queijo mussarela, parmesão, gorgonzola e catupiry sobre uma massa fina.",
+            "quantidade": "8 fatias",
+            "ingredientes": ["Massa", "Molho de tomate", "Queijo mussarela", "Parmesão", "Gorgonzola", "Catupiry"],
+            "preco": 48.00
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nome": "Churrasco do Sul",
+        "pratos": [
+          {
+            "id": 201,
+            "nome": "Picanha na Brasa",
+            "thumbnail": "https://i.imgur.com/mZtGNPj.jpeg",
+            "imagem": "https://i.imgur.com/mZtGNPj.jpeg",
+            "descricao": "Suculenta picanha grelhada servida com arroz, feijão tropeiro e batata frita.",
+            "quantidade": "300g",
+            "ingredientes": ["Picanha", "Sal grosso", "Arroz", "Feijão tropeiro", "Batata frita"],
+            "preco": 69.90
+          },
+          {
+            "id": 202,
+            "nome": "Costela Gaúcha",
+            "thumbnail": "https://i.imgur.com/I6KfAjF.jpeg",
+            "imagem": "https://i.imgur.com/I6KfAjF.jpeg",
+            "descricao": "Costela bovina assada lentamente, acompanhada de farofa e vinagrete.",
+            "quantidade": "500g",
+            "ingredientes": ["Costela bovina", "Sal", "Farofa", "Vinagrete"],
+            "preco": 79.90
+          },
+          {
+            "id": 203,
+            "nome": "Espetinho Misto",
+            "thumbnail": "https://i.imgur.com/00cJNwv.jpeg",
+            "imagem": "https://i.imgur.com/00cJNwv.jpeg",
+            "descricao": "Espetinho de carne e frango grelhado, acompanhado de mandioca cozida.",
+            "quantidade": "2 espetos",
+            "ingredientes": ["Carne bovina", "Frango", "Sal", "Mandioca"],
+            "preco": 29.90
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "nome": "Sushi Express",
+        "pratos": [
+          {
+            "id": 301,
+            "nome": "Combinado Sushi 20 peças",
+            "thumbnail": "https://i.imgur.com/3ibVDHx.jpeg",
+            "imagem": "https://i.imgur.com/3ibVDHx.jpeg",
+            "descricao": "Combinado especial com sushis variados, incluindo nigiris e uramakis.",
+            "quantidade": "20 peças",
+            "ingredientes": ["Arroz japonês", "Salmão", "Alga", "Cream cheese", "Shoyu"],
+            "preco": 85.00
+          },
+          {
+            "id": 302,
+            "nome": "Temaki de Salmão",
+            "thumbnail": "https://i.imgur.com/35Qv6ty.jpeg",
+            "imagem": "https://i.imgur.com/35Qv6ty.jpeg",
+            "descricao": "Cone de alga recheado com arroz, salmão fresco e cream cheese.",
+            "quantidade": "1 unidade",
+            "ingredientes": ["Arroz japonês", "Salmão", "Alga", "Cream cheese"],
+            "preco": 22.90
+          },
+          {
+            "id": 303,
+            "nome": "Hot Roll",
+            "thumbnail": "https://i.imgur.com/4U2mJLR.jpeg",
+            "imagem": "https://i.imgur.com/4U2mJLR.jpeg",
+            "descricao": "Sushi empanado recheado com salmão e cream cheese, servido com molho tarê.",
+            "quantidade": "8 unidades",
+            "ingredientes": ["Arroz japonês", "Salmão", "Cream cheese", "Farinha panko", "Shoyu", "Molho tarê"],
+            "preco": 32.00
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "nome": "Hamburgueria 47",
+        "pratos": [
+          {
+            "id": 401,
+            "nome": "Cheeseburger Clássico",
+            "thumbnail": "https://i.imgur.com/JWYbZiY.jpeg",
+            "imagem": "https://i.imgur.com/JWYbZiY.jpeg",
+            "descricao": "Hambúrguer artesanal com queijo cheddar, alface, tomate e molho especial.",
+            "quantidade": "1 unidade",
+            "ingredientes": ["Pão brioche", "Hambúrguer", "Queijo cheddar", "Alface", "Tomate", "Molho especial"],
+            "preco": 25.90
+          },
+          {
+            "id": 402,
+            "nome": "Smash Burger",
+            "thumbnail": "https://i.imgur.com/8lK9xV8.jpeg",
+            "imagem": "https://i.imgur.com/8lK9xV8.jpeg",
+            "descricao": "Dois hambúrgueres finos e crocantes, queijo, cebola grelhada e pão de brioche.",
+            "quantidade": "1 unidade",
+            "ingredientes": ["Pão brioche", "Dois hambúrgueres", "Queijo cheddar", "Cebola caramelizada"],
+            "preco": 29.90
+          },
+          {
+            "id": 403,
+            "nome": "Batata Rústica",
+            "thumbnail": "https://i.imgur.com/Wsk0KyD.jpeg",
+            "imagem": "https://i.imgur.com/Wsk0KyD.jpeg",
+            "descricao": "Batatas rústicas temperadas com páprica, ervas e alho.",
+            "quantidade": "300g",
+            "ingredientes": ["Batata", "Páprica", "Sal", "Alho", "Ervas"],
+            "preco": 14.90
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "nome": "Açaí do Parque",
+        "pratos": [
+          {
+            "id": 51,
+            "nome": "Açaí Tradicional",
+            "thumbnail": "https://i.imgur.com/eycsfLG.jpeg",
+            "imagem": "https://i.imgur.com/eycsfLG.jpeg",
+            "descricao": "Delicioso açaí na tigela com banana, granola e mel.",
+            "quantidade": "500ml",
+            "ingredientes": ["Açaí", "Banana", "Granola", "Mel"],
+            "preco": 15.90
+          },
+          {
+            "id": 52,
+            "nome": "Açaí com Leite Ninho e Morango",
+            "thumbnail": "https://i.imgur.com/7HAYoap.jpeg",
+            "imagem": "https://i.imgur.com/7HAYoap.jpeg",
+            "descricao": "Açaí cremoso com leite em pó e morangos frescos.",
+            "quantidade": "500ml",
+            "ingredientes": ["Açaí", "Leite Ninho", "Morango"],
+            "preco": 18.90
+          },
+          {
+            "id": 53,
+            "nome": "Açaí Proteico",
+            "thumbnail": "https://i.imgur.com/8pyg86H.jpeg",
+            "imagem": "https://i.imgur.com/8pyg86H.jpeg",
+            "descricao": "Açaí batido com whey protein e pasta de amendoim.",
+            "quantidade": "500ml",
+            "ingredientes": ["Açaí", "Whey Protein", "Pasta de Amendoim"],
+            "preco": 22.90
+          }
+        ]
+      }
+    ]
+  }
