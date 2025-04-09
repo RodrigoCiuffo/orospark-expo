@@ -20,7 +20,12 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.rodrigociuffo.orospark"
+      "package": "com.rodrigociuffo.orospark",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAvs9mTIX5641IDTDSazdOBImnPuUILZ5Y"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
