@@ -30,11 +30,11 @@ const LojasScreen = () => {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.lojaContainer}
-            onPress={() => router.push({ pathname: "/lojaDetalhe", params: { id: String(item.id) } })}>
+            onPress={() => router.push({ pathname: "/detalhamento", params: { id: String(item.id) } })}>
             <Image source={{uri: item.logo}}  style={styles.logo} />
             <Text style={styles.nome}>{item.nome}</Text>
           </TouchableOpacity>)}/>
-          <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/"})}></CustomButton>
+          <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/(tabs)/home"})}></CustomButton>
           </View>
     </ScrollView>
 

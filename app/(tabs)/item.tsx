@@ -25,7 +25,7 @@ const DetalheItemScreen = () => {
     });
   }, [id]);
 
-  if (!item) return <Text>Carregando...</Text>;
+  if (!item) return <Text>Selecione um dos itens de cardápio das lojas.</Text>;
 
   return (
     <ScrollView style={styles.container}>

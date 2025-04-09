@@ -27,7 +27,7 @@ const LojaDetalheScreen = () => {
     if (lojaSelecionada) setLoja(lojaSelecionada);
   }, [id]);
 
-  if (!loja) return <Text>Carregando...</Text>;
+  if (!loja) return <Text>Selecione uma loja na aba Lojas para prosseguir.</Text>;
 
   return (
     <ScrollView contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.container}>

@@ -32,7 +32,7 @@ const CardapioScreen = () => {
         renderItem={({ item }) => (
           <TouchableOpacity 
             style={styles.itemContainer} 
-            onPress={() => router.push({ pathname: "/(tabs)/detalheItem", params: { id: String(item.id) } })}>
+            onPress={() => router.push({ pathname: "/(tabs)/item", params: { id: String(item.id) } })}>
             <Image source={{ uri: item.thumbnail }} style={styles.thumbnail} />
             <View>
               <Text style={styles.nome}>{item.nome}</Text>
@@ -40,7 +40,7 @@ const CardapioScreen = () => {
             </View>
           </TouchableOpacity>)}/>
           <TouchableOpacity style={styles.botaoVoltar}>
-          <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/(tabs)/lojaDetalhe"})}></CustomButton>
+          <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/(tabs)/detalhamento"})}></CustomButton>
           </TouchableOpacity>
     </ScrollView>
   );
