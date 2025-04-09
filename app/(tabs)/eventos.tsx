@@ -1,41 +1,38 @@
 import React from 'react';
 import { ScrollView, View, Text, StyleSheet, FlatList } from 'react-native';
-import { Video } from 'expo-av';
-import eventosData from '../../assets/eventos.json';
+import { Video } from 'expo-av'; // Componente de vídeo do Expo para exibição de apresentações
+import eventosData from '../../assets/eventos.json'; // Importa os dados dos eventos a partir do JSON
 
+// Interface que define a estrutura dos eventos
 interface Evento {
   id: string;
-  nome: string;
+  nome: string; 
   video: {
     uri: string;
   };
 }
 
 const EventosScreen = () => {
-  const [eventos, setEventos] = React.useState<Evento[]>([]);
+  const [eventos, setEventos] = React.useState<Evento[]>([]); // Estado para armazenar a lista de eventos
 
   React.useEffect(() => {
-    setEventos(eventosData);
+    setEventos(eventosData); // Atualiza o estado com os eventos carregados do JSON
   }, []);
 
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>EVENTOS SEMANAIS</Text>
-      <Text style={styles.descricao}>Aqui você consegue acompanhar nossa programação dos fins de semana e, de quebra, ganhar uma palhinha das bandas incríveis que pode ouvir e assistir no nosso Orospark! :)</Text>
+      <Text style={styles.descricao}>
+        Aqui você consegue acompanhar nossa programação dos fins de semana e, de quebra, ganhar uma palhinha das bandas incríveis que pode ouvir e assistir no nosso Orospark! :)
+      </Text>
       <FlatList
-        data={eventos}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item, index }) => (
+        data={eventos} // Usa os eventos carregados do JSON
+        keyExtractor={(item) => item.id} // Define uma chave única baseada no ID do evento
+        renderItem={({ item, index }) => ( // Renderiza cada evento da lista (com adição das datas a cada 3 eventos ou período de sexta, sábado e domingo)
           <View style={styles.evento}>
-            {(index === 0) && (
-              <Text style={styles.semanas}>11/04 a 13/04</Text>
-            )}
-            {(index === 3) && (
-              <Text style={styles.semanas}>18/04 a 20/04</Text>
-            )}
-            {(index === 6) && (
-              <Text style={styles.semanas}>25/04 a 27/04</Text>
-            )}
+            {(index === 0) && <Text style={styles.semanas}>11/04 a 13/04</Text>}
+            {(index === 3) && <Text style={styles.semanas}>18/04 a 20/04</Text>}
+            {(index === 6) && <Text style={styles.semanas}>25/04 a 27/04</Text>}
             <Text style={styles.nome}>{item.nome}</Text>
             <Video source={item.video} style={styles.video} useNativeControls />
           </View>
@@ -45,6 +42,7 @@ const EventosScreen = () => {
   );
 };
 
+// Estilos da tela de eventos
 const styles = StyleSheet.create({
   container: { 
     backgroundColor: '#000000',

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity, Linking } from 'react-native';
-import { useLocalSearchParams } from 'expo-router';
-import lojasData from '../../assets/lojas.json';
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router'; // Obtém parâmetros da URL para identificar a loja selecionada
+import lojasData from '../../assets/lojas.json'; // Importa os dados das lojas a partir do JSON
+import { useRouter } from 'expo-router'; 
 import CustomButton from '@/components/CustomButton';
 
+// Interface para definir o formato dos dados de uma loja
 interface Loja {
   id: number;
   nome: string;
@@ -18,19 +19,23 @@ interface Loja {
 }
 
 const LojaDetalheScreen = () => {
-  const router = useRouter();
-  const { id } = useLocalSearchParams();
-  const [loja, setLoja] = useState<Loja | null>(null);
+  const router = useRouter(); 
+  const { id } = useLocalSearchParams(); // Obtém o ID da loja selecionada a partir da URL atual
+  const [loja, setLoja] = useState<Loja | null>(null); // Estado para armazenar os detalhes da loja
 
   useEffect(() => {
+    // Busca no JSON a loja correspondente ao ID fornecido
     const lojaSelecionada = lojasData.find((item) => item.id.toString() === id);
-    if (lojaSelecionada) setLoja(lojaSelecionada);
-  }, [id]);
 
+    // Se a loja for encontrada, atualiza o estado
+    if (lojaSelecionada) setLoja(lojaSelecionada);
+  }, [id]); // Executa a busca sempre que o ID da loja mudar
+
+  // Se nenhuma loja for encontrada, exibe uma mensagem informativa ao usuário
   if (!loja) return <Text>Selecione uma loja na aba Lojas para prosseguir.</Text>;
 
   return (
-    <ScrollView contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}} style={styles.container}>
+    <ScrollView contentContainerStyle={{ justifyContent: 'center', alignItems: 'center' }} style={styles.container}>
       <Image source={{ uri: loja.banner }} style={styles.banner} />
       <Text style={styles.nome}>{loja.nome}</Text>
       <Text style={styles.secundarios}>{loja.descricao}</Text>
@@ -40,18 +45,19 @@ const LojaDetalheScreen = () => {
         ))}
       </View>
       <View style={styles.divContato}>
-      <Text style={styles.contato}>Telefone: {loja.telefone}</Text>
-      <Text style={styles.contato}>WhatsApp: {loja.whatsapp}</Text>
+        <Text style={styles.contato}>Telefone: {loja.telefone}</Text>
+        <Text style={styles.contato}>WhatsApp: {loja.whatsapp}</Text>
       </View>
       <View style={styles.containerBotao}>
-      <CustomButton title={'DELIVERY'} onPress={() => Linking.openURL(loja.delivery)}></CustomButton>
-      <CustomButton title={'CARDÁPIO'} onPress={() => router.push({ pathname: "/cardapio", params: { id: String(loja.id) } })}></CustomButton>
+        <CustomButton title={'DELIVERY'} onPress={() => Linking.openURL(loja.delivery)} /> 
+        <CustomButton title={'CARDÁPIO'} onPress={() => router.push({ pathname: "/cardapio", params: { id: String(loja.id) } })} />
       </View>
-      <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/lojas"})}></CustomButton>
+      <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/lojas" })} />
     </ScrollView>
   );
 };
 
+// Estilização da tela de detalhamento da loja
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
