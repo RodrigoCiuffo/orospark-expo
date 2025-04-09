@@ -39,7 +39,7 @@ const DetalheItemScreen = () => {
         <Text key={index} style={styles.ingrediente}>- {ingrediente}</Text>
       ))}
           <TouchableOpacity style={styles.botaoVoltar}>
-          <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/(tabs)/lojaDetalhe"})}></CustomButton>
+          <CustomButton title={'VOLTAR'} onPress={() => router.push({ pathname: "/(tabs)/cardapio"})}></CustomButton>
           </TouchableOpacity>
     </ScrollView>
   );
